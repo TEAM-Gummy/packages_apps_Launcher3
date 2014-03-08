@@ -1902,7 +1902,7 @@ public class Launcher extends Activity
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         super.onPrepareOptionsMenu(menu);
-        if (!mWorkspace.isInOverviewMode()) {
+        if (!mWorkspace.isInOverviewMode() && !isAllAppsVisible()) {
             mWorkspace.enterOverviewMode();
         }
         return false;
@@ -4121,13 +4121,6 @@ public class Launcher extends Activity
     /* Cling related */
     private boolean isClingsEnabled() {
         if (DISABLE_CLINGS) {
-            return false;
-        }
-
-        // For now, limit only to phones
-        LauncherAppState app = LauncherAppState.getInstance();
-        DeviceProfile grid = app.getDynamicGrid().getDeviceProfile();
-        if (grid.isTablet()) {
             return false;
         }
 
