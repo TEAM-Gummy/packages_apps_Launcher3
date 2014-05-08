@@ -37,8 +37,4 @@
     <string name="menu_settings">""</string>
     <string name="menu_wallpaper">""</string>
     <string name="workspace_cling_open_all_apps">""</string>
-
-    <!-- Clear keyguard wallpaper tile text -->
-    <string name="clear_keyguard_wallpaper">Clear</string>
-
 </resources>
